@@ -1,0 +1,135 @@
+body {
+    margin: 0px;
+    background-color: gray;
+    color: white;
+    transition: 3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* FRONT PAGE */
+.page-container {
+    position: relative;
+    background-color: green;
+    background-color: white;
+    color: black;
+}
+
+.check-orders {
+    /* mui hack */
+    position: absolute !important;
+
+    top: 0;
+    right: 0;
+}
+
+.shop-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2%;
+    gap: 1.5vw;
+
+    grid-auto-rows: 85vh;
+}
+
+.shop-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.shop-container > div > img {
+    width: 100%;
+    height: 50%;
+}
+
+/* CART MODAL */
+.cart-modal {
+    position: fixed;
+    left: 60%;
+    right: 0;
+    top: 0%;
+    bottom: 0;
+
+    /* if text is too long, a scrollbar will be provided */
+    overflow-y: auto;
+    color: black;
+    background-color: white;
+}
+
+.cart-modal > * {
+    padding: 4%;
+}
+
+.cart-modal header,
+.cart-modal footer {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.checkout-cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
+
+    position: relative;
+}
+
+.checkout-cart-item::after {
+    content: "";
+    position: absolute;
+
+    left: 4%;
+    width: 92%;
+    bottom: 0;
+    height: 0.5%;
+    background-color: black;
+}
+
+.checkout-cart-item-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: fill;
+}
+
+.modal-item-title {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.modal-item-pricing-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-cart-image {
+    /* Width will change height accordingly. Also
+    apparently changing the height will make no difference
+    to the width.
+    */
+
+    width: 30%;
+    margin-left: 3%;
+}
+
+.modal-item-quantity-section {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    height: 28%;
+}
+
+.modal-item-quantity-section button {
+    background-color: lightgray;
+    height: 8vh;
+}
